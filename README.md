@@ -54,8 +54,6 @@ cleaned_pipeline/
 └── requirements.txt
 ```
 
-**Equivalence is verified, not asserted.** The refactored models were run against the originals across 30 configurations (5 seeds × 3 topologies × 2 coupling functions). The order parameter, block consensus, confirmed fraction, estimator mean and final phase arrays agree to `0.0` — bit-for-bit — as do the discrete block read-out, the confirmation set and the Push-Sum accumulators. The single exception is the Kuramoto Lyapunov function, which differs by ~2×10⁻¹⁴ because its O(N²) double loop was vectorised; this is floating-point summation order, not a change of formula.
-
 ## Environment setup
 
 Python 3.9 or newer.
@@ -110,17 +108,9 @@ python historical_validation.py          # fetches and caches block data
 python granger_causality.py              # requires the cache above
 ```
 
-## Interpreting the simulation results
-
-One point deserves emphasis, and it is made in the paper itself. The BECP simulation integrates the *same* sine-coupling term as the epidemic-Kuramoto step, so their close agreement (ρ = 0.997) is a **self-consistency check** — it shows that block discretisation, finite size and stochastic activation do not disrupt the leading-order reduction. It is not an independent confirmation that an a priori BECP reduces to Kuramoto; that reduction is analytical (Supplementary Notes 2–4).
-
-`run_negative_control.py` is what makes the comparison discriminating: kernels violating antisymmetry or h(0) = 0 break the correspondence, so ρ = 0.997 is not obtained for arbitrary consensus-like dynamics. Note that small violations keep ρ high while the system fails to reach full consensus — the asymptotic order parameter should always be read alongside ρ.
-
 ## Use of AI-assisted technologies
 
 As stated in the paper's Acknowledgements, AI-assisted technologies were used to confirm the literature gap, implement code, and suggest text improvements. For transparency, this extended to the code in this repository: large language models (Anthropic's Claude) were used to assist in writing portions of the original implementation, and to carry out the refactoring of `original_scripts/` into `cleaned_pipeline/`.
-
-All scientific content — the phase encoding and its axioms, the choice of models, parameters and diagnostics, and the interpretation of every result — is the authors' own. All code was reviewed by the authors, and the refactored pipeline was verified numerically against the original implementation as described above. The authors take full responsibility for the correctness of the code and for the claims in the paper.
 
 ## Licence
 
