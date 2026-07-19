@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the paper it supports."
+title: "Physical synchronisation for anomaly detection in epidemic blockchain consensus: analysis code"
+type: software
+license: MIT
+authors:
+  - family-names: Mordarski
+    given-names: Marcel
+    orcid: "https://orcid.org/0009-0003-1762-2260"
+    affiliation: "Department of Computing, Imperial College London"
+    email: marcel.mordarski25@imperial.ac.uk
+  - family-names: Magri
+    given-names: Luca
+    orcid: "https://orcid.org/0000-0002-0598-8279"
+    affiliation: "Department of Aeronautics, Imperial College London"
+  - family-names: Knottenbelt
+    given-names: William
+    orcid: "https://orcid.org/0000-0002-8490-1011"
+    affiliation: "Department of Computing, Imperial College London"
+keywords:
+  - blockchain consensus
+  - Kuramoto model
+  - epidemic synchronisation
+  - anomaly detection
+  - complex networks
+preferred-citation:
+  type: article
+  title: "Physical synchronisation for anomaly detection in epidemic blockchain consensus"
+  authors:
+    - family-names: Mordarski
+      given-names: Marcel
+      orcid: "https://orcid.org/0009-0003-1762-2260"
+    - family-names: Magri
+      given-names: Luca
+      orcid: "https://orcid.org/0000-0002-0598-8279"
+    - family-names: Knottenbelt
+      given-names: William
+      orcid: "https://orcid.org/0000-0002-8490-1011"
+  journal: "Scientific Reports"
+  year: 2026
+  doi: 10.1038/s41598-026-61354-4
